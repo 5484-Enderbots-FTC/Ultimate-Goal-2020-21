@@ -310,7 +310,6 @@ public class FtcRobotControllerActivity extends Activity
           }
         });
         popupMenu.inflate(R.menu.ftc_robot_controller);
-        FtcDashboard.populateMenu(popupMenu.getMenu());
         popupMenu.show();
       }
     });
@@ -378,10 +377,13 @@ public class FtcRobotControllerActivity extends Activity
     if (preferencesHelper.readBoolean(getString(R.string.pref_wifi_automute), false)) {
       initWifiMute(true);
     }
+<<<<<<< HEAD
 
     FtcAboutActivity.setBuildTimeFromBuildConfig(BuildConfig.BUILD_TIME);
 
     FtcDashboard.start();
+=======
+>>>>>>> parent of e09e966... road runner pt 2
   }
 
   protected UpdateUI createUpdateUI() {
@@ -461,8 +463,11 @@ public class FtcRobotControllerActivity extends Activity
     if (preferencesHelper != null) preferencesHelper.getSharedPreferences().unregisterOnSharedPreferenceChangeListener(sharedPreferencesListener);
 
     RobotLog.cancelWriteLogcatToDisk();
+<<<<<<< HEAD
 
     FtcDashboard.stop();
+=======
+>>>>>>> parent of e09e966... road runner pt 2
   }
 
   protected void bindToService() {
@@ -528,7 +533,6 @@ public class FtcRobotControllerActivity extends Activity
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.ftc_robot_controller, menu);
-    FtcDashboard.populateMenu(menu);
     return true;
   }
 
@@ -681,8 +685,11 @@ public class FtcRobotControllerActivity extends Activity
         return service.getRobot().eventLoopManager;
       }
     });
+<<<<<<< HEAD
 
     FtcDashboard.attachWebServer(service.getWebServer());
+=======
+>>>>>>> parent of e09e966... road runner pt 2
   }
 
   private void updateUIAndRequestRobotSetup() {
@@ -722,8 +729,11 @@ public class FtcRobotControllerActivity extends Activity
 
     passReceivedUsbAttachmentsToEventLoop();
     AndroidBoard.showErrorIfUnknownControlHub();
+<<<<<<< HEAD
 
     FtcDashboard.attachEventLoop(eventLoop);
+=======
+>>>>>>> parent of e09e966... road runner pt 2
   }
 
   protected OpModeRegister createOpModeRegister() {
