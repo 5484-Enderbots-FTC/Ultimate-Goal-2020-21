@@ -1,2 +1,5 @@
-include ':FtcRobotController'
+include ':build.release.gradle'
+include ':build.release.gradle'
 include ':TeamCode'
+project(':build.release.gradle').projectDir = new File(rootDir, 'TeamCode/build.release.gradle')
+project(':build.release.gradle').projectDir = new File(rootDir, 'TeamCode/build.release.gradle')
